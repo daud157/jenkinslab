@@ -36,11 +36,7 @@ pipeline {
                 sh 'echo "Deploying the application"'
             }
         }
-        post {
-            always{
-                sh 'docker logout'
-            }
-        }
+      
     }
 
 
