@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Docker build'){
             steps{
-                sh 'sudo docker build -t daud611/jenkins-integration:latest .'
+                sh 'docker build -t daud611/jenkins-integration:latest .'
             }
         }
         stage('login'){
@@ -28,7 +28,7 @@ pipeline {
         }
         stage('push'){
             steps{
-                sh 'sudo docker push daud611/jenkins-integration:latest'
+                sh 'docker push daud611/jenkins-integration:latest'
             }
         }
         stage('deploy'){
