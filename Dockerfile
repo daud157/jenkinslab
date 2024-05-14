@@ -1,10 +1,10 @@
 FROM node:latest
 
-# WORKDIR /app
-# COPY . . 
+WORKDIR /app
+COPY . . 
 
-# RUN npm install
+RUN npm install
 
-# EXPOSE 5173
+EXPOSE 5173
 
-# CMD [ "npm","run","dev" ]
+CMD [ "npm","run","dev" ]
