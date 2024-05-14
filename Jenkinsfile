@@ -18,6 +18,7 @@ pipeline {
         }
         stage('Docker build'){
             steps{
+                  
                 sh 'docker build -t daud611/jenkins-integration:latest .'
             }
         }
