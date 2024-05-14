@@ -2,7 +2,7 @@ pipeline {
    
     agent any
   environment{
-     DOCKERHUB_CREDENTIALS = credentials('dockerhub_6593')
+     DOCKERHUB_CREDENTIALS=credentials('dockerhub-6593')
   }
     stages{
         stage('Build'){
@@ -18,7 +18,6 @@ pipeline {
         }
         stage('Docker build'){
             steps{
-                  
                 sh 'docker build -t daud611/jenkins-integration:latest .'
             }
         }
